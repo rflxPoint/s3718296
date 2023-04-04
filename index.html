@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            My not-so-first website.
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+        <!-- Sources need to be inside the the arrows, same as the image sources :P-->
+    </head>
+
+    <body style="background: palegoldenrod">
+        <!-- These symbols here indicate the start of a comment...
+        <h1> This is the main heading!</h1>
+        <h2> The subheading for the page</h2>
+        <p style="background-color: blanchedalmond; font-family: Arial, Helvetica, sans-serif;"> This is a paragraph that will not <br> be in the final build :p</p>
+        ... And these ones close comments!-->
+
+        <img id="30minutes" src="img/30minutes.png" width="400px">
+        <img id="IceCore" src="img/IceCore1.png" width="400px">
+        <img id="Corporate" src="img/Corporate1.png" onmouseover="this.src='img/Corporate2.png';" onmouseout="this.src='img/Corporate1.png';" width="400px">
+
+        <script>
+            var sound1 = new buzz.sound("sound/doors.mp3");
+            var sound2 = new buzz.sound("sound/weirdness.mp3");
+            var sound3 = new buzz.sound("sound/button.mp3");
+
+            window.onload = function() {
+                document.getElementById('30minutes').addEventListener('click', function () {sound1.play(); });  
+                document.getElementById('IceCore').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('Corporate').addEventListener('click', function () {sound3.play(); });
+            }
+        </script>
+    </body>
+</html>
